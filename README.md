@@ -61,6 +61,21 @@ The app installs any missing packages (`shiny`, `bslib`, `httr2`, `leaflet`, `ht
 - Data is cached for 30 minutes and saved to disk, so the app keeps working, showing the last good copy, if the Ministry API goes down.
 - "Use my location" needs a secure context: `localhost` or https.
 
+### Deploy from GitHub (Posit Connect Cloud / Posit Connect)
+
+The repo includes a `manifest.json` (made with `rsconnect::writeManifest()`), so you can deploy the app straight from GitHub:
+
+1. In [Posit Connect Cloud](https://connect.posit.cloud), choose **Publish → Shiny**, then pick this repository, the `main` branch and `app.R` as the primary file.
+2. Connect reads `manifest.json` and installs the exact R version and package versions listed in it.
+
+If you change the packages the app uses, or `app.R` itself, regenerate the manifest and commit it with the code:
+
+```r
+rsconnect::writeManifest(appDir = ".", appFiles = "app.R")
+```
+
+`manifest.json` records a checksum of `app.R`, so the two should always be committed together.
+
 ### Configuration
 
 | Variable   | Default                          | Purpose                                                                |
