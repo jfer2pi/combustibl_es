@@ -1,5 +1,7 @@
 # combustibl_es
 
+Part of [Fernando Rodríguez Alvarado's portfolio](https://jfer2pi.github.io)
+
 **Fuel·ES** is a single-file R/Shiny app for finding fuel prices at every service station in Spain. It has two modes:
 
 - **Nearby**: the nearest or cheapest *N* stations around an address, a `lat, lon` pair, your current location, or a point you click on the map.
