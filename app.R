@@ -810,7 +810,15 @@ ui <- page_sidebar(
       "Prices: <a href='https://geoportalgasolineras.es' target='_blank' rel='noopener'>MITECO Geoportal</a>. ",
       "Map data © <a href='https://www.openstreetmap.org/copyright' target='_blank' rel='noopener'>OpenStreetMap</a> contributors. ",
       "Geocoding: Nominatim."
-    )))
+    ))),
+    tags$div(
+      style = "margin-top: auto; padding-top: .75rem; border-top: 1px solid var(--bs-border-color, rgba(128,128,128,.25)); font-size: .75rem; line-height: 1.5; opacity: .8;",
+      "Built by ", tags$a(href = "https://jfer2pi.github.io", target = "_blank", rel = "noopener", "Fernando Rodríguez Alvarado"),
+      tags$br(),
+      tags$a(href = "https://jfer2pi.github.io", target = "_blank", rel = "noopener", "Portfolio"), " · ",
+      tags$a(href = "https://www.linkedin.com/in/jfer2pi", target = "_blank", rel = "noopener", "LinkedIn"), " · ",
+      tags$a(href = "https://github.com/jfer2pi/combustibl_es", target = "_blank", rel = "noopener", "Source code")
+    )
   ),
 
   tags$head(
